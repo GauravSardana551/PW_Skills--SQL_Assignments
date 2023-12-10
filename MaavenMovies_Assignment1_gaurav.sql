@@ -1,0 +1,26 @@
+USE mavenmovies;
+SELECT * FROM information_schema.key_column_usage;
+show tables;
+select * from actor;
+select * from customer;
+select distinct country from country;
+select customer_id, first_name, last_name, email from customer where active=1;
+select rental_id from rental where customer_id=1;
+select film_id, title from film where rental_duration >5;
+select count(film_id) from film where replacement_cost between 15 and 20;
+select count( distinct first_name) from actor;
+select * from customer limit 10; 
+select * from customer where first_name like 'b%' limit 3 ;
+select title from film where rating='g';
+select * from customer where first_name like 'a%';
+select * from customer where first_name like '%a';
+select * from city where city like 'a%a' limit 3;
+select first_name from customer where first_name like '%ni%';
+select first_name from customer where first_name like '_r%';
+select first_name from customer where first_name like 'a%' and first_name like '_____';
+select first_name from customer where first_name like 'a%o';
+select title from film where rating IN ('PG-13', 'PG');
+select * from film where length between 50 and 100;
+select * from actor limit 50;
+select  distinct film_id from inventory;
+
